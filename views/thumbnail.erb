@@ -1,0 +1,18 @@
+<div data-role="header">
+
+  <a href="/" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
+  <h1>#<%= @tag_name %></h1>
+
+</div>
+
+<div data-role="content" id="Gallery1" class="gallery-page">	
+
+  <div align="right"><a href="/thumbnail/<%= @tag_name %>/<%= @next_max_id %>" data-role="button" data-transition="fade" data-icon="arrow-r" data-inline="true" data-mini="true">Next</a></div>
+
+  <ul class="gallery">
+    <% for @data in @data %>
+      <li><a href= "/detail/<%= @tag_name %>/<%= @data.id %>/<%= @current_max_id%>" ><img src='<%= @data.images.thumbnail.url %>'></a></li>
+    <% end %>  
+  </ul>
+
+</div>

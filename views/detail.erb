@@ -1,0 +1,16 @@
+<div data-role="header">
+
+  <a href="/" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
+  <h1>#<%= @tag_name %></h1>
+
+</div>
+
+<div data-role="content">    
+
+  <a href="/thumbnail/<%= @tag_name %>/<%= @next_max_id %>" data-role="button" data-transition="fade" data-icon="arrow-l" data-inline="true" data-mini="true">Back to Thumbnail</a>
+  <div align="center"><img src='<%= @detail.images.standard_resolution.url %>' width=80% ></div>
+
+  <% if @detail.caption != nil %>
+   <p><%= @detail.caption.text %></p>
+  <% end %>                  
+</div>
