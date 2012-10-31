@@ -17,7 +17,7 @@ InstgramAPI(<https://github.com/Instagram/instagram-ruby-gem>)を利用して、
 * ruby
 * sinatra
 * jQueryMobile
-* irb
+* Erb
 
 3.利用する場合の注意点
 --------------
