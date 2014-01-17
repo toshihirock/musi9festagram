@@ -13,9 +13,9 @@ NEXT_USE_TAG_ID = 1
 FIRST_PAGE = "-1"
 
 Instagram.configure do |config|
-  config.client_id = "4385c1efac054540ab04a36ccadd4ea1"
-  config.client_secret = "b5e384bd770248a7a2c885b93013d513"
-  config.access_token = "3739387.4385c1e.d6e9a109a1744466a79388393faeb691"
+  config.client_id = ""
+  config.client_secret = ""
+  config.access_token = ""
 end
 
 get "/" do
@@ -43,4 +43,10 @@ get "/thumbnail/*/*" do
   @next_max_id = media_item.pagination.next_max_id
   @data = media_item['data']
   erb :thumbnail
+end
+
+get "/manifest/" do
+
+    content_type "application/x-web-app-manifest+json"
+    erb :manifest, :layout => false
 end
